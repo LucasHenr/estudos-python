@@ -142,7 +142,7 @@ print("O aluno sorteado foi: {}".format(sorteado))
 '''
 
 #Ex19
-
+'''
 from random import shuffle
 aluno1 = str(input("Digite o nome do aluno: "))
 aluno2 = str(input("Digite o nome do aluno: "))
@@ -151,4 +151,8 @@ aluno4 = str(input("Digite o nome do aluno: "))
 lista_aluno = [aluno1,aluno2,aluno3,aluno4]
 shuffle(lista_aluno)
 print(f"A ordem de apresentacao é {lista_aluno}")
+'''
+
+#Ex20
+import pygame
 
