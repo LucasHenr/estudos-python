@@ -1,13 +1,20 @@
 from random import randint
-maquina = randint(10,26)
-print("Pensei em um número entre 10 e 26.... Acha que consegue adivinhar? ")
-certo = False
-tentativas = 0 
-while not certo:
-    jogador = input("Digite seu palpite")
-    tentativas +=1
-    if int(jogador) == maquina:
-        print("Parabéns você acertou")
-        certo = True
+tentativas = 5
+numeros = [14,19,23]
 
-print("Programa encerrado")
+while tentativas >=1:
+    instrucao = input("Deseja jogar o dado (s/n)?")
+    numero_sorteado = randint(10,26)
+    print(f"Número sorteado {numero_sorteado}")
+    if numero_sorteado in numeros:
+        tentativas += 3
+        print(f"Você acertou e tem {tentativas} tentativas")
+        
+    else:
+        tentativas -= 1
+        print(f"Você errou e tem {tentativas} tentativas")
+    
+    if tentativas == 0:
+        print("GAME OVER")
+        break
+    
