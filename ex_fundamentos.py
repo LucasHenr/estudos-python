@@ -153,6 +153,5 @@ shuffle(lista_aluno)
 print(f"A ordem de apresentacao é {lista_aluno}")
 '''
 
-#Ex20
-import pygame
+
 

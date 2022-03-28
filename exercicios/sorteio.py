@@ -4,6 +4,8 @@ numeros = [14,19,23]
 
 while tentativas >=1:
     instrucao = input("Deseja jogar o dado (s/n)?")
+    if instrucao != "s":
+            break
     numero_sorteado = randint(10,26)
     print(f"Número sorteado {numero_sorteado}")
     if numero_sorteado in numeros:
@@ -14,7 +16,6 @@ while tentativas >=1:
         tentativas -= 1
         print(f"Você errou e tem {tentativas} tentativas")
     
-    if tentativas == 0:
-        print("GAME OVER")
-        break
+
+print("Obrigado por jogar")
     
