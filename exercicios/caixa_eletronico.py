@@ -1,15 +1,25 @@
-def valor_saque():
-    saque = input("Qual valor vocë deseja sacar?")
-    return
-
-
+def valor_saque(saque):
+    saque = input("Qual valor vocë deseja sacar? ")
+    
 def calcula_cedulas():
-    notas = [1,5,10,50,100]
-    divisao_1 = valor_saque / notas[0]
-    return
+    nota100 = 100
+    qtd_nota_100 = 0
+    valor = valor_saque(saque)
+    if valor <= nota100:
+        valor_saque - nota100
+        qtd_nota_100 = qtd_nota_100 +1
+        print(f"Fora utilizados {qtd_nota_100} notas de 100 ")
 
 valor_saque()
 calcula_cedulas()
+    
+
+    
+
+
+
+
+
 
 
 
