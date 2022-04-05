@@ -11,7 +11,7 @@ def votacao():
     quantidade_votos = 0
     urna = []
     while quantidade_votos < 6:
-        voto = int(input("Digite em quem deseja votar: "))
+        voto = input("Digite em quem deseja votar: ")
         quantidade_votos = quantidade_votos + 1
         urna.append(voto)
 
@@ -21,16 +21,15 @@ def votacao():
     return urna
 
 def calcula_candidato_eleito(urna):
-    candidatos = ['João', 'Zé', 'Marcos', 'Matheus', 'Nulo', 'Branco']
-    votos_candidatos = urna
-    for numero in votos_candidatos:
-        urna.count()
+    candidatos = {
+        '1': 'Jo'
+    }
 
-
+    
 def simula_votacao():
     menu()
     votos = votacao()
-    calcula_candidato_eleito(votos)
+
        
 simula_votacao()
         
