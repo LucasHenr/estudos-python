@@ -6,12 +6,16 @@ def obtem_quantidade_espaco_branco():
     print(f"{espaco_em_branco} espaco/espacos vazios")
 
 def obtem_quanditade_vogais(texto):
-    vogais = {'a': 0, 'e':0, 'i':0, 'o':0, 'u':0}
-    for letra, quantidade in vogais.items():
-        if letra in texto:
-            quantidade = quantidade +1
-        print(letra, quantidade)
+    quantidade_vogais = 0
+    vogais = ['a','e','i','o','u']
+
+    for letra in texto:
+        if letra in vogais:
+            quantidade_vogais += 1
+
+    print(f"Possui {quantidade_vogais} vogais")
 
 obtem_quanditade_vogais(texto)
+obtem_quantidade_espaco_branco()
 
     
