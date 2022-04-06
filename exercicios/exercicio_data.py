@@ -8,7 +8,10 @@ def converte_data(data):
 
     return datetime.strftime(data_texto, '%d de %B de %Y')
 
-data = input("Forneca a data no valor DD/MM/YYYY: ")
-data_formata = converte_data(data)
+def executa():
+    data = input("Forneca a data no valor DD/MM/YYYY: ")
+    data_formatada  = converte_data(data)
 
-print(data_formata)
+    print(data_formatada)
+
+executa()

@@ -5,7 +5,10 @@ def converte_horario(hora):
 
     return datetime.strftime(horario, '%I:%M %p')
 
-hora = input("Informe a hora no formato 00:00: " )
-hora_formatada = converte_horario(hora)
+def executa():
+    hora = input("Informe a hora no formato 00:00: " )
+    hora_formatada = converte_horario(hora)
 
-print(hora_formatada)
+    print(hora_formatada)   
+
+executa()
