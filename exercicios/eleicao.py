@@ -21,31 +21,42 @@ def votacao():
     return urna
 
 def calcula_candidato_eleito(urna):
+    porcentagens = []
     candidatos = {
-        '1': 'Jo'
+        '1': 'João',
+        '2':  'Zé',
+        '3': 'Marcos',
+        '4': 'Matheus',
+        '5': 'Nulo',
+        '6': 'Branco'
     }
 
+    for numero,candidato in candidatos.items():
+        quantidade_votos = urna.count(numero)
+
+        porcentagem_candidato = (quantidade_votos / len(urna) * 100)
+        porcentagem_formatada = round(porcentagem_candidato,2)
+        porcentagens.append(porcentagem_formatada)
+        
+    candidato_mais_votos = max(porcentagens)
+    
+    if candidato_mais_votos < 50:
+        porcentagens.sort(reverse = True)
+        segundo_turno = porcentagens[1]
+
+        print("Será necessário segundo turno")
     
 def simula_votacao():
     menu()
     votos = votacao()
-
+    calcula_candidato_eleito(votos)
        
 simula_votacao()
         
 
 
-'''def obtem_candidato_eleito(urna):
-    votos_candidato1 = urna.count(1)
-    votos_candidato2 = urna.count(2)
-    votos_candidato3 = urna.count(3)
-    votos_candidato4 = urna.count(4)
-    votos_nulo = urna.count(5)
-    votos_branco = urna.count(6)
-    porcentagem_candidato1 = (urna.count(1) / len(urna)) * 100
 
-    print(porcentagem_candidato1)
-'''
+
 
 
 
