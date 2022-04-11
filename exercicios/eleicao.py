@@ -11,10 +11,7 @@ def votacao():
     quantidade_votos = 0
     urna = []
     while quantidade_votos < 6:
-        voto = int(input("Digite em quem deseja votar: "))
-        if voto >= 7:
-            print("Código de candidato inválido, digite outro código")
-            continue
+        voto = input("Digite em quem deseja votar: ")
         quantidade_votos = quantidade_votos + 1
         urna.append(voto)
 
@@ -34,17 +31,33 @@ def calcula_candidato_eleito(urna):
     }
 
     resultado_final = calcula_voto(urna,candidatos)
-
+     
     if resultado_final[0][0] < 50:
-        print(f"{resultado_final[0][1]} e {resultado_final[1][1]} estão no segundo turno")
-        segundo_turno(urna,candidatos)
+
+        if resultado_final[1][2] == '5' or resultado_final[1][2] == '6':
+            
+            print(f"{resultado_final[0][1]}, ELEITO")
+        
+        else: 
+        
+            print(f"{resultado_final[0][1]} e {resultado_final[1][1]} estão no segundo turno")
+
+            segundo_turno(candidatos)
 
     else:
-        print(f"{resultado_final[0][1]}, ELEITO")
-    
-def segundo_turno(urna, candidatos):
+
+        if resultado_final[0][2] == '5' or resultado_final[0][2] == '6':
+            print("Branco e nulo não podem ser eleitos")
         
-        votacao()
+        else:
+
+            print(f"{resultado_final[0][1]}, ELEITO")
+    
+def segundo_turno(candidatos, resultado_final):  
+
+        print(f"Votacão segundo turno, {resultado_final[0][1]} e {resultado_final[1][1]}")
+        
+        urna = votacao()
 
         resultado_votacao = calcula_voto(urna, candidatos)
 
