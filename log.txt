@@ -1,0 +1,4 @@
+INFO-2022-04-14 16:38:06,108-Escolha do usuário: 1
+INFO-2022-04-14 16:38:07,838-Primeiro valor do usuário: 80
+INFO-2022-04-14 16:38:10,055-Segundo valor do usuário: 40
+INFO-2022-04-14 16:38:10,055-iniciando calculo da média
